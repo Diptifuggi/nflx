@@ -1,0 +1,212 @@
+.lumpsum-container {
+    background: rgb(209, 224, 215);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+    /* padding-bottom: 30px; */
+    /* padding-top: 60px; */
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Flexbox Layout */
+.calculator-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left: Input Section */
+.input-section {
+    flex: 1;
+    text-align: left;
+    padding: 30px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* Right: Chart Section */
+.chart-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Increased Chart Size */
+.chart-section .recharts-responsive-container {
+    width: 100% !important;
+    height: 300px !important; 
+}
+
+.target-amount {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00796b;
+    margin-top: 20px;
+}
+
+/* New Bottom Section */
+.summary-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.summary-box {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.summary-box h3 {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.summary-box p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00796b;
+}
+/* Custom styles for input sliders */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #00C49F, #001F3F);
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Thumb (Handle) Styling */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #001F3F; /* Dark blue to match chart */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #001F3F;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Value Display Styling */
+.value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00C49F; 
+    text-align: right;
+    margin-top: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calculator-body {
+        flex-direction: column;
+    }
+
+    .input-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .chart-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .chart-section .recharts-responsive-container {
+        height: 280px !important; 
+    }
+
+    .summary-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .summary-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .lumpsum-container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .input-group label {
+        font-size: 1.3rem;
+    }
+
+    .value {
+        font-size: 1.4rem;
+    }
+
+    .chart-section .recharts-responsive-container {
+        height: 250px !important; 
+    }
+
+    .summary-section {
+        padding: 15px;
+    }
+
+    .summary-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .summary-box p {
+        font-size: 1.3rem;
+    }
+}

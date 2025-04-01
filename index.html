@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumpsum Value Calulator</title>
+     <!-- <style>
+      body {
+        background: url('/images/6.png') no-repeat center center fixed;
+        background-size: cover;
+        background-color: #f8f9fa;
+      }
+    </style> -->
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* Video Background Styling */
+      .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      /* Overlay for better visibility */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); 
+        z-index: -1;
+      }
+
+      /*Ensures root app is above video */
+      #root {
+        position: relative;
+        z-index: 1;
+      }
+
+</style>
+  </head>
+  <body>
+        <!-- Background Video -->
+        <video class="video-bg" autoplay loop muted> 
+          <source src="/videos/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+     
+        <!-- Dark Overlay -->
+        <div class="overlay"></div>
+    
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
